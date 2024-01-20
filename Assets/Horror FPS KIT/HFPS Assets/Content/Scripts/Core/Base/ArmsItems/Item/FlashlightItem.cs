@@ -28,11 +28,12 @@ namespace HFPS.Player
         public AudioSource audioSource;
 
         [Header("Flashlight Settings")]
-        [ReadOnly, SerializeField] 
-        private float batteryPercentage = 100;
-        [ReadOnly, SerializeField]
-        private float m_flashlightIntensity;
+        [SerializeField] 
+        public float batteryPercentage = 100;
+        [SerializeField]
+        public float m_flashlightIntensity;
         [Space]
+        public MicrophoneListener microphoneListener;
 
         public AudioClip ClickSound;
         public bool InfiniteBattery = false;
@@ -167,9 +168,10 @@ namespace HFPS.Player
 
                 if (!InfiniteBattery)
                 {
-                    batteryPercentage -= Time.deltaTime * (100 / batteryLifeInSec);
+                    batteryPercentage = batteryPercentage - Time.deltaTime * (2000 / batteryLifeInSec) + Time.deltaTime * ( microphoneListener.volume);
                     batteryPercentage = Mathf.Clamp(batteryPercentage, 0, 100);
 
+                
                     m_flashlightIntensity = flashlightIntensity * batteryPercentage / 100;
                     LightObject.intensity = m_flashlightIntensity;
 

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class MicrophoneListener : MonoBehaviour
 {
+    public float PlayerVolume;
+    
     private AudioClip microphoneInput;
     private bool microphoneInitialized;
     private int sampleWindow = 128;
@@ -25,8 +27,8 @@ public class MicrophoneListener : MonoBehaviour
     {
         if (microphoneInitialized)
         {
-            float volume = GetAverageVolume();
-            Debug.Log("Volume: " + volume);
+            PlayerVolume = GetAverageVolume();
+            Debug.Log("Volume: " + PlayerVolume);
         }
     }
 

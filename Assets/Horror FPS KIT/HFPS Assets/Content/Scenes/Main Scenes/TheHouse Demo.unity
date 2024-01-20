@@ -20089,6 +20089,24 @@ PrefabInstance:
       objectReference: {fileID: 2454444126610704011}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ca21ae4155bbb145ac0a7dd5bdb7325, type: 3}
+--- !u!1 &1070659527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2525695879625688765, guid: 9f256dcdfd91e854ab8e4a9f62248d1e,
+    type: 3}
+  m_PrefabInstance: {fileID: 877733418}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1070659528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070659527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729a52b4481b9a84eaad6d84d9c0a980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1072772768
 GameObject:
   m_ObjectHideFlags: 0
@@ -42222,7 +42240,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &600195178553461844
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -42239,7 +42257,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &601113814381000389
 GameObject:
   m_ObjectHideFlags: 0
@@ -53746,6 +53765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
@@ -53773,6 +53793,7 @@ MonoBehaviour:
     type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!4 &3479476492031000289
 Transform:
   m_ObjectHideFlags: 0
@@ -64380,7 +64401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd8e66be0c813b54fa47207efea118fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerObj: {fileID: 0}
+  m_PlayerObj: {fileID: 1070659527}
   sceneLoaderName: SceneLoader
   isCursorShown: 0
   pauseTime: 0

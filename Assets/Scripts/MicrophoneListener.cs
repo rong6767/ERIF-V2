@@ -7,6 +7,7 @@ public class MicrophoneListener : MonoBehaviour
     private AudioClip microphoneInput;
     private bool microphoneInitialized;
     private int sampleWindow = 128;
+    public float volume;
 
     void Start()
     {
@@ -27,8 +28,8 @@ public class MicrophoneListener : MonoBehaviour
     {
         if (microphoneInitialized)
         {
-            PlayerVolume = GetAverageVolume();
-            Debug.Log("Volume: " + PlayerVolume);
+            volume = GetAverageVolume()*100;
+            Debug.Log("Volume: " + volume);
         }
     }
 

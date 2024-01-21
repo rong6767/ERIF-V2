@@ -18,6 +18,8 @@ namespace HFPS.Player
         private HFPS_GameManager gameManager;
         private Animation AnimationComp;
 
+        public GameObject deadCanvas;
+
         [Header("Inventory")]
         [InventorySelector]
         public int FlashlightID;
@@ -68,6 +70,12 @@ namespace HFPS.Player
         private bool isReloading;
         private bool noPower;
         private bool scare;
+        
+        // Define a delegate for the event
+        public delegate void FlashlightOut();
+
+        // Define the event based on the delegate
+        public event FlashlightOut OnFlashlightOut;
 
         void Awake()
         {
@@ -187,13 +195,16 @@ namespace HFPS.Player
                         }
                     }
 
-                    if (batteryPercentage <= 1.0f && batteryPercentage > 0.0f)
+                    if (batteryPercentage <= 1.0f && batteryPercentage >= 0.0f)
                     {
                         if (!AnimationComp.isPlaying)
                         {
                             LightObject.intensity = 0f;
                             if (enableExtra) AnimationComp.Play(NoPowerAnim);
                             noPower = true;
+                            OnFlashlightOut?.Invoke();
+                            deadCanvas.SetActive(true);
+                            WaitAndExitPlayMode();
                         }
                     }
                 }
@@ -202,6 +213,17 @@ namespace HFPS.Player
             {
                 LightObject.enabled = false;
             }
+        }
+
+        private IEnumerator WaitAndExitPlayMode()
+        {
+            yield return new WaitForSeconds(3);
+            
+            #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+            #else
+                Application.Quit();
+            #endif
         }
 
         public void Reload()

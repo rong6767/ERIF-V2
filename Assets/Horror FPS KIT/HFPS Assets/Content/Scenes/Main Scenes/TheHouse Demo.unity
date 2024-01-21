@@ -433,12 +433,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19642638}
   m_LocalRotation: {x: -0.7071068, y: 0.00012501328, z: 0.00012507147, w: 0.70710677}
-  m_LocalPosition: {x: 40, y: -0, z: 171.6}
+  m_LocalPosition: {x: 40, y: 0, z: 171.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 91860875}
-  m_RootOrder: 7
+  m_Children:
+  - {fileID: 1388857136}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0.020000001}
 --- !u!64 &19642640
 MeshCollider:
@@ -2460,7 +2461,6 @@ Transform:
   - {fileID: 4222162644675612}
   - {fileID: 7417256042531370175}
   - {fileID: 19823472}
-  - {fileID: 19642639}
   - {fileID: 1267320213}
   - {fileID: 798054943261819480}
   m_Father: {fileID: 430150136}
@@ -7250,7 +7250,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &414943578
 GameObject:
@@ -20966,7 +20966,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 30}
 --- !u!1001 &1011626182
 PrefabInstance:
@@ -28538,7 +28538,7 @@ Transform:
   - {fileID: 32807816}
   - {fileID: 32807818}
   m_Father: {fileID: 91860875}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1269730179
 PrefabInstance:
@@ -31565,7 +31565,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388133695}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -31841,15 +31841,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388857129}
-  m_LocalRotation: {x: -0.50044936, y: 0.49955028, z: 0.4999344, w: 0.5000656}
-  m_LocalPosition: {x: 39.99, y: -0.01, z: 171.68}
-  m_LocalScale: {x: 2.1500099, y: 2.1499999, z: 2.2}
+  m_LocalRotation: {x: -0.00027163548, y: 0.00027163548, z: 0.70710677, w: -0.70710677}
+  m_LocalPosition: {x: -0.01, y: -1.63, z: -0.01}
+  m_LocalScale: {x: 2.15001, y: 2.1499999, z: 2.2000003}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 362400970}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: -90.044, y: 90, z: -0.059020996}
+  m_Father: {fileID: 19642639}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -180, y: 179.956, z: 90}
 --- !u!1001 &1389978433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34997,7 +34997,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1679913104
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -35014,7 +35014,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!23 &1679913105
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -47699,7 +47700,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &600195178553461844
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -47716,7 +47717,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &601113814381000389
 GameObject:
   m_ObjectHideFlags: 0
@@ -48743,7 +48745,7 @@ Transform:
   - {fileID: 797948517779069020}
   - {fileID: 797901714624723384}
   m_Father: {fileID: 91860875}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -89.98}
 --- !u!1 &798355203599229943
 GameObject:
@@ -61318,7 +61320,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: YOU ARE DEAD
+  m_Text: 'DARKNESS HAS CAUGHT YOU
+
+    YOU ARE DEAD'
 --- !u!224 &3479476492341694857
 RectTransform:
   m_ObjectHideFlags: 0
@@ -62228,7 +62232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &3479476492421700586
 GameObject:
   m_ObjectHideFlags: 0
@@ -63620,7 +63624,6 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -67588,7 +67591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &3479476493148717436
 CanvasRenderer:
   m_ObjectHideFlags: 0

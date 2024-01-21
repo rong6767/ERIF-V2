@@ -18,7 +18,7 @@ namespace HFPS.Player
         private HFPS_GameManager gameManager;
         private Animation AnimationComp;
 
-        public Canvas deadCanvas;
+        public GameObject deadCanvas;
 
         [Header("Inventory")]
         [InventorySelector]
@@ -195,7 +195,7 @@ namespace HFPS.Player
                         }
                     }
 
-                    if (batteryPercentage <= 1.0f && batteryPercentage > 0.0f)
+                    if (batteryPercentage <= 1.0f && batteryPercentage >= 0.0f)
                     {
                         if (!AnimationComp.isPlaying)
                         {
@@ -203,7 +203,7 @@ namespace HFPS.Player
                             if (enableExtra) AnimationComp.Play(NoPowerAnim);
                             noPower = true;
                             OnFlashlightOut?.Invoke();
-                            deadCanvas.enabled = true;
+                            deadCanvas.SetActive(true);
                             WaitAndExitPlayMode();
                         }
                     }

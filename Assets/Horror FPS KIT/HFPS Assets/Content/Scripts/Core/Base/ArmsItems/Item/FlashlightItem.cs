@@ -18,6 +18,8 @@ namespace HFPS.Player
         private HFPS_GameManager gameManager;
         private Animation AnimationComp;
 
+        public Canvas deadCanvas;
+
         [Header("Inventory")]
         [InventorySelector]
         public int FlashlightID;
@@ -201,6 +203,8 @@ namespace HFPS.Player
                             if (enableExtra) AnimationComp.Play(NoPowerAnim);
                             noPower = true;
                             OnFlashlightOut?.Invoke();
+                            deadCanvas.enabled = true;
+                            WaitAndExitPlayMode();
                         }
                     }
                 }
@@ -209,6 +213,17 @@ namespace HFPS.Player
             {
                 LightObject.enabled = false;
             }
+        }
+
+        private IEnumerator WaitAndExitPlayMode()
+        {
+            yield return new WaitForSeconds(3);
+            
+            #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+            #else
+                Application.Quit();
+            #endif
         }
 
         public void Reload()

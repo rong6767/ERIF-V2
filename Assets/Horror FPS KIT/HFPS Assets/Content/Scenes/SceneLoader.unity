@@ -312,6 +312,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 740739610930199839, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 309.8777
+      objectReference: {fileID: 0}
+    - target: {fileID: 740739610930199839, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 271.8711
+      objectReference: {fileID: 0}
+    - target: {fileID: 740739610930199839, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 740739610930199839, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -185
+      objectReference: {fileID: 0}
     - target: {fileID: 820966801421401138, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
         type: 3}
       propertyPath: m_Name
@@ -321,6 +341,18 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074939310024152973, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
+        type: 3}
+      propertyPath: m_Text
+      value: "Dear Stranger,\r\n\r\nBefore the darkness catches you, scream your
+        lungs out to navigate through the shadow.\r\nThe flashlight will keep you
+        accompanied and unlock the brightness. \r\n\r\nKind regards,\r\nDarkness.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074939310024152973, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4722915737269059574, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
         type: 3}
@@ -435,7 +467,7 @@ PrefabInstance:
     - target: {fileID: 5658705336153171280, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6069276833082089107, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
         type: 3}

@@ -356,6 +356,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11939268868310596, guid: e274edc91acbb9d42a96268a7312de7c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 381.6663
+      objectReference: {fileID: 0}
+    - target: {fileID: 11939268868310596, guid: e274edc91acbb9d42a96268a7312de7c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 11939268868310596, guid: e274edc91acbb9d42a96268a7312de7c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 11939268868310596, guid: e274edc91acbb9d42a96268a7312de7c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -35
+      objectReference: {fileID: 0}
     - target: {fileID: 11939269078268115, guid: e274edc91acbb9d42a96268a7312de7c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -486,5 +506,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11939268868310597, guid: e274edc91acbb9d42a96268a7312de7c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e274edc91acbb9d42a96268a7312de7c, type: 3}
+--- !u!1 &11939270298766611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 11939268868310599, guid: e274edc91acbb9d42a96268a7312de7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 11939270298766610}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &11939270298766612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11939270298766611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c5f5e161903da3b4188d918bec246f19, type: 3}
+    m_FontSize: 100
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 250
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: I Scream

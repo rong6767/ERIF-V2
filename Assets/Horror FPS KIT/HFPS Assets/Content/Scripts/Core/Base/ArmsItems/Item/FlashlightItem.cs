@@ -68,6 +68,12 @@ namespace HFPS.Player
         private bool isReloading;
         private bool noPower;
         private bool scare;
+        
+        // Define a delegate for the event
+        public delegate void FlashlightOut();
+
+        // Define the event based on the delegate
+        public event FlashlightOut OnFlashlightOut;
 
         void Awake()
         {
@@ -194,6 +200,7 @@ namespace HFPS.Player
                             LightObject.intensity = 0f;
                             if (enableExtra) AnimationComp.Play(NoPowerAnim);
                             noPower = true;
+                            OnFlashlightOut?.Invoke();
                         }
                     }
                 }

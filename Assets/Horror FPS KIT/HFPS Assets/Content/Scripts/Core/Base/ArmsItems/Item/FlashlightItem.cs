@@ -220,7 +220,7 @@ namespace HFPS.Player
             yield return new WaitForSeconds(3);
             
             #if UNITY_EDITOR
-                EditorApplication.isPlaying = false;
+                UnityEditor.EditorApplication.isPlaying = false;
             #else
                 Application.Quit();
             #endif

@@ -526,7 +526,7 @@ namespace HFPS.Systems
             {
                 int val = int.Parse(value);
                 int quality = val == 0 ? 3 : val == 1 ? 2 : val == 2 ? 1 : 0;
-                QualitySettings.masterTextureLimit = quality;
+                QualitySettings.globalTextureMipmapLimit = quality;
             }
             else if (option == OptionType.ShadowResolution)
             {
@@ -609,7 +609,7 @@ namespace HFPS.Systems
             }
             else if (option == OptionType.TextureQuality)
             {
-                int val = QualitySettings.masterTextureLimit;
+                int val = QualitySettings.globalTextureMipmapLimit;
                 return val == 3 ? 0 : val == 2 ? 1 : val == 1 ? 2 : 3;
             }
             else if (option == OptionType.ShadowResolution)

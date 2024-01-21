@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 using ThunderWire.Input;
 using ThunderWire.Utility;
 using HFPS.UI;
+using UnityEngine.SceneManagement;
 
 namespace HFPS.Systems
 {
@@ -74,6 +75,12 @@ namespace HFPS.Systems
 
         [HideInInspector]
         public bool rebindPending = false;
+
+        public void LoadMyScene()
+        {
+            SceneManager.LoadScene("TheHouse Demo");
+        }
+
 
         private void OnEnable()
         {

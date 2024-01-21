@@ -27,7 +27,7 @@ public class MicrophoneListener : MonoBehaviour
         if (microphoneInitialized)
         {
             volume = GetAverageVolume()*100;
-            Debug.Log("Volume: " + volume);
+            // Debug.Log("Volume: " + volume);
         }
     }
 

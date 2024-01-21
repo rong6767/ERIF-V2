@@ -300,6 +300,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -315,6 +316,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: _SCENELOADER
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002311079579675003, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722915737269059574, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5368730163172809352, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
         type: 3}
@@ -419,6 +430,16 @@ PrefabInstance:
     - target: {fileID: 5368730163172809352, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658705336153171280, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069276833082089107, guid: b1aa73eb19c9acd41a7a3265a54a67f2,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

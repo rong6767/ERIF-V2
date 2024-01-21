@@ -54,7 +54,7 @@ namespace HFPS.Player
         [Header("Extra Animations")]
         public bool enableExtra = true;
         public string LowPowerAnim;
-        [Range(5, 40)] public float LowAnimSpeed = 0.5f;
+        [Range(0, 5)] public float LowAnimSpeed = 0.5f;
         public string ScareAnim;
         [Range(0, 5)] public float ScareAnimSpeed = 1f;
         public string NoPowerAnim;

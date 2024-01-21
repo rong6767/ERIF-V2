@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73fcb51f6d678d2498af4fb5f59a2c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemTitle: Oil Lamp
+  itemTitle: Flashlight
   itemType: 2
   examineType: 1
   examineRotate: 3

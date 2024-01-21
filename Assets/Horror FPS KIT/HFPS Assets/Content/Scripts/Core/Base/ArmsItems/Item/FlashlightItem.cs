@@ -28,11 +28,12 @@ namespace HFPS.Player
         public AudioSource audioSource;
 
         [Header("Flashlight Settings")]
-        [ReadOnly, SerializeField] 
-        private float batteryPercentage = 100;
-        [ReadOnly, SerializeField]
-        private float m_flashlightIntensity;
+        [SerializeField] 
+        public float batteryPercentage = 100;
+        [SerializeField]
+        public float m_flashlightIntensity;
         [Space]
+        public MicrophoneListener microphoneListener;
 
         public AudioClip ClickSound;
         public bool InfiniteBattery = false;
@@ -52,10 +53,12 @@ namespace HFPS.Player
 
         [Header("Extra Animations")]
         public bool enableExtra = true;
+        public string LowPowerAnim;
+        [Range(5, 40)] public float LowAnimSpeed = 0.5f;
         public string ScareAnim;
         [Range(0, 5)] public float ScareAnimSpeed = 1f;
         public string NoPowerAnim;
-        [Range(0, 5)] public float NoPowerAnimSpeed = 1f;
+        [Range(0, 2)] public float NoPowerAnimSpeed = 1f;
 
         [HideInInspector]
         public bool CanReload;
@@ -84,6 +87,7 @@ namespace HFPS.Player
             {
                 AnimationComp[ScareAnim].speed = ScareAnimSpeed;
                 AnimationComp[NoPowerAnim].speed = NoPowerAnimSpeed;
+                AnimationComp[LowPowerAnim].speed = LowAnimSpeed;
             }
         }
 
@@ -156,7 +160,7 @@ namespace HFPS.Player
                 scare = false;
             }
 
-            if (isSelected && !noPower && !scare)
+            if (isSelected  && !scare)
             {
                 gameManager.UpdateSliderValue(0, batteryPercentage);
             }
@@ -167,15 +171,25 @@ namespace HFPS.Player
 
                 if (!InfiniteBattery)
                 {
-                    batteryPercentage -= Time.deltaTime * (100 / batteryLifeInSec);
+                    batteryPercentage = batteryPercentage - Time.deltaTime * (2000 / batteryLifeInSec) + Time.deltaTime * ( microphoneListener.volume);
                     batteryPercentage = Mathf.Clamp(batteryPercentage, 0, 100);
 
+                
                     m_flashlightIntensity = flashlightIntensity * batteryPercentage / 100;
                     LightObject.intensity = m_flashlightIntensity;
 
-                    if (batteryPercentage <= 1.0f)
+                    if(batteryPercentage <= 40.0f && batteryPercentage >= 1.0f)
                     {
-                        if (!AnimationComp.isPlaying && !noPower)
+                        if (!AnimationComp.isPlaying)
+                        {
+                            LightObject.intensity = 0.2f;
+                            if (enableExtra) AnimationComp.Play(LowPowerAnim);
+                        }
+                    }
+
+                    if (batteryPercentage <= 1.0f && batteryPercentage > 0.0f)
+                    {
+                        if (!AnimationComp.isPlaying)
                         {
                             LightObject.intensity = 0f;
                             if (enableExtra) AnimationComp.Play(NoPowerAnim);

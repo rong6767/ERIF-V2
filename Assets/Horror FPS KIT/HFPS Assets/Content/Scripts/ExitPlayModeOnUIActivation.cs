@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -29,11 +30,6 @@ public class ExitPlayModeOnUIActivation : MonoBehaviour
 
     private void ExitPlayMode()
     {
-#if UNITY_EDITOR
-        // Exit play mode
-        EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        SceneManager.LoadScene("MainMenu");
     }
 }

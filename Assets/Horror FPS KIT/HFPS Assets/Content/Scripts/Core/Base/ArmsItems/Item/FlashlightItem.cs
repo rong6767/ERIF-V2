@@ -7,6 +7,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using HFPS.Systems;
+using UnityEngine.SceneManagement;
 
 namespace HFPS.Player
 {
@@ -219,11 +220,7 @@ namespace HFPS.Player
         {
             yield return new WaitForSeconds(3);
             
-            #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-            #else
-                Application.Quit();
-            #endif
+            SceneManager.LoadScene("MainMenu");
         }
 
         public void Reload()

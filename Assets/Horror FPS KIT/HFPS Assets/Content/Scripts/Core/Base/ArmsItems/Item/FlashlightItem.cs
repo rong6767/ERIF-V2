@@ -204,7 +204,7 @@ namespace HFPS.Player
                             noPower = true;
                             OnFlashlightOut?.Invoke();
                             deadCanvas.SetActive(true);
-                            WaitAndExitPlayMode();
+                            StartCoroutine(WaitAndExitPlayMode());
                         }
                     }
                 }
